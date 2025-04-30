@@ -6,10 +6,11 @@ interface ProductPageProps {
     id: string
   }
 }
-export default async function ProductPage({ searchParams }: ProductPageProps) {
+export default async function ProductPage({ searchParams }: any) {
   const id = searchParams.id
   const products = await getProducts(id)
   const product = products[0]
 
   return <ProductView product={product} />
 }
+

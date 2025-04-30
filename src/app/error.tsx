@@ -1,7 +1,11 @@
 "use client"
 import Image from 'next/image';
 import styles from 'app/sass/global-error.module.sass'
-import { ErrorPageProps } from '../../type';
+
+interface ErrorPageProps {
+  error: Error;
+  reset: () => void;
+}
 
 export default function GloablError({ reset }: ErrorPageProps) {
   return (

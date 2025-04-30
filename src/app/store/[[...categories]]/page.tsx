@@ -9,7 +9,7 @@ interface CategoriesPorps{
     }
 }
   
-  export default async function Category(props: CategoriesPorps) {
+  export default async function Category(props: any) {
     const { categories } = props.params
     let products = []
     const collections = await getCollections()
